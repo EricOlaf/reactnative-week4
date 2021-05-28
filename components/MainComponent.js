@@ -5,6 +5,7 @@ import CampsiteInfo from './CampsiteInfoComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Reservation from './ReservationComponent';
+import Constants from 'expo-constants';
 import { View, Platform, StyleSheet, Text, ScrollView, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator, DrawerItems } from "react-navigation-drawer";
@@ -258,7 +259,7 @@ class Main extends Component {
             <View
                 style={{
                     flex: 1, 
-                    paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight
+                    paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
                 }}>
                 <AppNavigator />
             </View>
