@@ -7,6 +7,7 @@ import Contact from './ContactComponent';
 import Reservation from './ReservationComponent';
 import Favorites from './FavoritesComponent';
 import Login from './LoginComponent';
+import Constants from 'expo-constants';
 import { View, Platform, StyleSheet, Text, ScrollView, Image,
     Alert, ToastAndroid } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -376,7 +377,7 @@ class Main extends Component {
             <View
                 style={{
                     flex: 1, 
-                    paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight
+                    paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
                 }}>
                 <AppNavigator />
             </View>
